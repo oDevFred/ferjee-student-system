@@ -26,6 +26,7 @@ def test_create_student(client, test_db):
             "phone": "11999999999"
         }
     )
+    print(response.json())  # Adicionar para depuração
     assert response.status_code == 200
     assert response.json() == {
         "name": "João Silva",
